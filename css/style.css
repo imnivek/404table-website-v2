@@ -1,0 +1,167 @@
+/* =========================================================
+   404TABLE 官網 V2 — 共用樣式
+   風格：Rebellious Ink（現代藝術拼貼 × Brutalist × 文化科技）
+   ========================================================= */
+
+:root {
+  --paper-cream: #F6F3EB;
+  --paper-warm: #EFE3D1;
+  --forest-deep: #0B332B;
+  --forest-700: #1E5F4E;
+  --marker-yellow: #F2C14E;
+  --rebel-orange: #FF6B4A;
+  --tech-cyan: #00BFC2;
+  --ink-black: #111111;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper-cream);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 紙感方格底紋（全站固定背景） */
+.paper-grid::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(17, 17, 17, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, .03) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: .5;
+}
+body > * { position: relative; z-index: 1; }
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* ---------- 硬陰影（Brutalist depth） ---------- */
+.hard-shadow       { box-shadow: 8px 8px 0 0 #0B332B; }
+.hard-shadow-sm    { box-shadow: 4px 4px 0 0 #0B332B; }
+.hard-shadow-yellow{ box-shadow: 6px 6px 0 0 #F2C14E; }
+.hard-shadow-orange{ box-shadow: 6px 6px 0 0 #FF6B4A; }
+.hard-shadow-cyan  { box-shadow: 6px 6px 0 0 #00BFC2; }
+
+.press:hover  { transform: translate(2px, 2px); }
+.press:active { transform: translate(4px, 4px); box-shadow: none !important; }
+.press        { transition: transform .15s ease, box-shadow .15s ease; }
+
+/* ---------- 手繪 / 拼貼裝飾 ---------- */
+.doodle-underline {
+  background-image: linear-gradient(120deg, #F2C14E 0%, #F2C14E 100%);
+  background-repeat: no-repeat;
+  background-size: 100% .32em;
+  background-position: 0 88%;
+}
+.rebel-underline { position: relative; z-index: 1; }
+.rebel-underline::after {
+  content: '';
+  position: absolute;
+  left: -2px; bottom: 6px;
+  width: calc(100% + 4px); height: 14px;
+  background: #F2C14E;
+  z-index: -1;
+  transform: skewX(-12deg);
+  opacity: .85;
+}
+.scribble-bg { background-image: radial-gradient(#111 .5px, transparent .5px); background-size: 12px 12px; }
+.doodle-bg   { background-image: radial-gradient(#111111 .5px, transparent .5px); background-size: 24px 24px; }
+.cork-texture {
+  background-color: #e5e2da;
+  background-image: radial-gradient(#d1cdc1 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* 紙張堆疊（雙層 offset） */
+.paper-stack { position: relative; }
+.paper-stack::before,
+.paper-stack::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid #111;
+  z-index: -1;
+}
+.paper-stack::before { transform: translate(5px, 5px); background: #e5e2da; }
+.paper-stack::after  { transform: translate(10px, 10px); background: #F2C14E; z-index: -2; }
+
+/* 撕紙下緣 */
+.torn-edge-b {
+  clip-path: polygon(0 0,100% 0,100% 95%,98% 98%,95% 94%,92% 99%,88% 93%,85% 97%,80% 92%,75% 98%,70% 94%,65% 97%,60% 93%,55% 99%,50% 95%,45% 97%,40% 92%,35% 98%,30% 94%,25% 97%,20% 93%,15% 99%,10% 94%,5% 97%,0 94%);
+}
+
+/* ---------- 慢速旋轉的虛線圈 ---------- */
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+.animate-spin-slow { animation: spin-slow 18s linear infinite; }
+
+/* ---------- 進場淡入 ---------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .animate-spin-slow { animation: none; }
+}
+
+/* ---------- 頂部滾動進度條 ---------- */
+#scroll-progress {
+  position: fixed; top: 0; left: 0; height: 4px; width: 0;
+  background: var(--rebel-orange); z-index: 100;
+  transition: width .1s linear;
+}
+
+/* ---------- 行動版漢堡選單抽屜 ---------- */
+#mobile-drawer { transition: transform .3s ease; }
+#mobile-drawer.closed { transform: translateX(100%); }
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed; left: 50%; bottom: 32px; transform: translateX(-50%) translateY(120%);
+  background: var(--forest-deep); color: var(--paper-cream);
+  border: 2px solid #111; box-shadow: 6px 6px 0 0 #F2C14E;
+  padding: 14px 24px; font-weight: 700; z-index: 120;
+  transition: transform .35s cubic-bezier(.2,.9,.3,1.2);
+  display: flex; align-items: center; gap: 10px; max-width: 90vw;
+}
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* ---------- Modal ---------- */
+.modal-backdrop {
+  position: fixed; inset: 0; background: rgba(11,51,43,.55);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px; z-index: 110; opacity: 0; pointer-events: none;
+  transition: opacity .25s ease; backdrop-filter: blur(2px);
+}
+.modal-backdrop.open { opacity: 1; pointer-events: auto; }
+.modal-card {
+  background: #fff; border: 4px solid #111; box-shadow: 10px 10px 0 0 #0B332B;
+  max-width: 560px; width: 100%; max-height: 90vh; overflow-y: auto;
+  transform: scale(.92); transition: transform .25s ease;
+}
+.modal-backdrop.open .modal-card { transform: scale(1); }
+
+/* 課程卡 hover */
+.course-card { transition: transform .25s ease, box-shadow .25s ease; }
+.course-card:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 0 #FF6B4A; }
+
+/* 講師照統一灰階 → hover 上色 */
+.tilt-img { transition: transform .4s ease, filter .5s ease; }
+
+/* 表單欄位 */
+.field {
+  width: 100%; background: transparent;
+  border: 0; border-bottom: 2px solid #111;
+  padding: 10px 2px; font-family: inherit; font-size: 16px;
+}
+.field:focus { outline: none; border-color: var(--rebel-orange); }
+select.field { padding-left: 0; }

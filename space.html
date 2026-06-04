@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>實體空間｜404TABLE｜共創基地 · 會議室 · 活動空間</title>
+<meta name="description" content="明亮有質感的共創空間：主教室、會議室、訪談室、交誼桌與茶水間。駐點、開會、辦活動一次滿足，歡迎預約參觀。"/>
+<link rel="icon" href="assets/brand/logo-black.png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/tw-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="js/site.js" defer></script>
+</head>
+<body class="paper-grid bg-paper-cream text-ink-black font-body-md selection:bg-marker-yellow selection:text-ink-black overflow-x-hidden">
+<div id="scroll-progress"></div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-paper-cream/95 backdrop-blur border-b-2 border-ink-black shadow-[4px_4px_0px_0px_rgba(11,51,43,1)]">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-container-padding h-20">
+    <a href="index.html" class="flex items-center gap-3 shrink-0"><img src="assets/brand/logo-black.png" alt="404TABLE" class="h-9 w-auto"/></a>
+    <nav class="hidden md:flex items-center gap-7 font-label-md text-label-md">
+      <a href="courses.html" class="hover:text-rebel-orange transition-colors">學程</a>
+      <a href="founders.html" class="hover:text-rebel-orange transition-colors">創業孵化</a>
+      <a href="space.html" class="text-rebel-orange font-bold border-b-2 border-rebel-orange">空間</a>
+      <a href="events.html" class="hover:text-rebel-orange transition-colors">活動</a>
+      <a href="about.html" class="hover:text-rebel-orange transition-colors">關於</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button data-modal-open="visit-modal" class="hidden sm:inline-flex items-center bg-forest-deep text-paper-cream px-5 py-2.5 border-2 border-ink-black font-label-md text-label-md hard-shadow-yellow press">預約參觀</button>
+      <button id="menu-open" class="md:hidden w-11 h-11 border-2 border-ink-black flex items-center justify-center" aria-label="選單"><span class="material-symbols-outlined">menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="mobile-drawer" class="closed fixed inset-0 z-[60] bg-forest-deep text-paper-cream md:hidden flex flex-col p-8">
+  <div class="flex justify-between items-center mb-12"><img src="assets/brand/logo-white.png" alt="404TABLE" class="h-9 w-auto"/><button id="menu-close" class="w-11 h-11 border-2 border-paper-cream flex items-center justify-center" aria-label="關閉"><span class="material-symbols-outlined">close</span></button></div>
+  <nav class="flex flex-col gap-7 font-display text-4xl font-extrabold"><a href="courses.html">學程</a><a href="founders.html">創業孵化</a><a href="space.html">空間</a><a href="events.html">活動</a><a href="about.html">關於</a></nav>
+</div>
+
+<main>
+<!-- Hero（雙圖拼貼） -->
+<section class="relative overflow-hidden border-b-4 border-ink-black">
+  <div class="flex flex-col md:flex-row h-auto md:h-[640px]">
+    <div class="w-full md:w-3/5 relative overflow-hidden group h-72 md:h-auto">
+      <img src="assets/space/space-main.jpg" alt="404TABLE 主空間教室" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"/>
+      <div class="absolute inset-0 bg-forest-deep/25"></div>
+    </div>
+    <div class="w-full md:w-2/5 relative overflow-hidden group h-72 md:h-auto border-t-4 md:border-t-0 md:border-l-4 border-ink-black">
+      <img src="assets/space/space-lounge.jpg" alt="交誼桌" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"/>
+      <div class="absolute inset-0 bg-rebel-orange/10"></div>
+    </div>
+  </div>
+  <div class="md:absolute md:inset-0 flex items-center justify-center pointer-events-none p-6 md:p-0 -mt-6 md:mt-0">
+    <div class="max-w-3xl w-full pointer-events-auto">
+      <div class="bg-paper-cream border-4 border-ink-black p-8 md:p-12 hard-shadow relative">
+        <span class="absolute -top-5 -right-4 bg-rebel-orange text-paper-cream px-5 py-2 border-2 border-ink-black font-label-md text-label-md rotate-3">CO-CREATION SPACE</span>
+        <h1 class="font-display text-4xl md:text-6xl font-extrabold mb-5 leading-none">專注在美好事物，<br/><span class="rebel-underline">讓夢想發生</span></h1>
+        <p class="font-body-lg text-body-lg mb-8 text-on-surface-variant max-w-xl">404TABLE 為你打造舒適專業、具設計質感的共創環境。省去裝潢與打理成本，讓你輕鬆專注於真正重要的事。</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button data-modal-open="visit-modal" class="bg-marker-yellow text-ink-black font-label-md px-8 py-4 border-2 border-ink-black hard-shadow-sm press">立即預約參觀</button>
+          <a href="tel:0223456789" class="flex items-center justify-center gap-3 font-label-md border-2 border-ink-black px-8 py-4 hover:bg-forest-deep hover:text-paper-cream transition-all"><span class="material-symbols-outlined">call</span> 02-2345-6789</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 六大空間 -->
+<section class="max-w-7xl mx-auto px-container-padding py-24">
+  <div class="mb-14 reveal">
+    <span class="font-label-md text-label-md text-rebel-orange">SPACE CATALOG</span>
+    <h2 class="font-display text-headline-lg md:text-display-lg font-extrabold text-forest-deep mt-2">六大區域，一應俱全</h2>
+    <p class="font-body-lg text-body-lg text-on-surface-variant mt-3">明亮有質感的風格裝潢，辦公、上課、開會、活動空間自由切換。</p>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-card-gap">
+    <!-- 主教室 -->
+    <div class="reveal border-2 border-ink-black bg-white flex flex-col hover:-translate-y-2 transition-transform">
+      <div class="h-52 overflow-hidden border-b-2 border-ink-black"><img src="assets/space/space-main.jpg" alt="主空間教室" class="w-full h-full object-cover"/></div>
+      <div class="p-6 flex-grow">
+        <h3 class="font-headline-md text-headline-md mb-2">主空間教室</h3>
+        <p class="text-sm text-on-surface-variant mb-4">適合教育訓練、大型講座、發表會與聚會。</p>
+        <ul class="space-y-2 font-label-sm text-label-sm">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-marker-yellow text-base">check_circle</span> 4K 投影 + 麥克風音響</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-marker-yellow text-base">check_circle</span> 可容納 30–40 人，桌椅彈性配置</li>
+        </ul>
+      </div>
+      <button data-modal-open="visit-modal" data-title="主空間教室" class="py-4 border-t-2 border-ink-black font-label-md hover:bg-forest-deep hover:text-paper-cream transition-all">詢問檔期與報價</button>
+    </div>
+    <!-- 大會議室 -->
+    <div class="reveal border-2 border-ink-black bg-marker-yellow flex flex-col hover:-translate-y-2 transition-transform">
+      <div class="h-52 overflow-hidden border-b-2 border-ink-black"><img src="assets/space/space-meeting.jpg" alt="大會議室" class="w-full h-full object-cover"/></div>
+      <div class="p-6 flex-grow">
+        <h3 class="font-headline-md text-headline-md mb-2">大會議室</h3>
+        <p class="text-sm text-on-surface-variant mb-4">正式或休閒風格的會議型態都能滿足。</p>
+        <ul class="space-y-2 font-label-sm text-label-sm">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-ink-black text-base">check_circle</span> 容納 8–12 人</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-ink-black text-base">check_circle</span> 高畫質螢幕 + 視訊會議</li>
+        </ul>
+      </div>
+      <button data-modal-open="visit-modal" data-title="大會議室" class="py-4 bg-ink-black text-paper-cream font-label-md hover:bg-forest-deep transition-all">立即預約</button>
+    </div>
+    <!-- 訪談室 -->
+    <div class="reveal border-2 border-ink-black bg-white flex flex-col hover:-translate-y-2 transition-transform">
+      <div class="h-52 overflow-hidden border-b-2 border-ink-black"><img src="assets/space/space-interview.jpg" alt="訪談室" class="w-full h-full object-cover"/></div>
+      <div class="p-6 flex-grow">
+        <h3 class="font-headline-md text-headline-md mb-2">訪談室 / 獨立空間</h3>
+        <p class="text-sm text-on-surface-variant mb-4">面試、訪談、Podcast 錄製、一對一諮詢專屬。</p>
+        <ul class="space-y-2 font-label-sm text-label-sm">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-marker-yellow text-base">check_circle</span> 良好隔音、安靜不受打擾</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-marker-yellow text-base">check_circle</span> 2–4 人舒適座位</li>
+        </ul>
+      </div>
+      <button data-modal-open="visit-modal" data-title="訪談室" class="py-4 border-t-2 border-ink-black font-label-md hover:bg-forest-deep hover:text-paper-cream transition-all">會員可預約</button>
+    </div>
+    <!-- 交誼桌 -->
+    <div class="reveal border-2 border-ink-black bg-white flex flex-col hover:-translate-y-2 transition-transform">
+      <div class="h-52 overflow-hidden border-b-2 border-ink-black"><img src="assets/space/space-lounge.jpg" alt="交誼桌" class="w-full h-full object-cover"/></div>
+      <div class="p-6 flex-grow">
+        <h3 class="font-headline-md text-headline-md mb-2">交誼桌 / 共用區</h3>
+        <p class="text-sm text-on-surface-variant mb-4">長桌共用區，駐點工作、社群交流、輕鬆協作。</p>
+        <ul class="space-y-2 font-label-sm text-label-sm">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-marker-yellow text-base">check_circle</span> 高速網路、插座充足</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-marker-yellow text-base">check_circle</span> 彈性入座、自由協作</li>
+        </ul>
+      </div>
+      <button data-modal-open="visit-modal" data-title="交誼桌 / 共用區" class="py-4 border-t-2 border-ink-black font-label-md hover:bg-forest-deep hover:text-paper-cream transition-all">了解駐點方案</button>
+    </div>
+    <!-- 茶水間 -->
+    <div class="reveal border-2 border-ink-black bg-white flex flex-col hover:-translate-y-2 transition-transform">
+      <div class="h-52 overflow-hidden border-b-2 border-ink-black"><img src="assets/space/space-pantry.jpg" alt="茶水間" class="w-full h-full object-cover"/></div>
+      <div class="p-6 flex-grow">
+        <h3 class="font-headline-md text-headline-md mb-2">茶水間 / Pantry</h3>
+        <p class="text-sm text-on-surface-variant mb-4">咖啡茶飲、冰箱、簡單備餐，休息與交流的角落。</p>
+        <ul class="space-y-2 font-label-sm text-label-sm">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-marker-yellow text-base">check_circle</span> 免費現磨咖啡、多款茶飲</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-marker-yellow text-base">check_circle</span> 冰箱、飲水、備品齊全</li>
+        </ul>
+      </div>
+      <button data-modal-open="visit-modal" data-title="茶水間" class="py-4 border-t-2 border-ink-black font-label-md hover:bg-forest-deep hover:text-paper-cream transition-all">會員免費使用</button>
+    </div>
+    <!-- 信件 / 借址 -->
+    <div class="reveal border-2 border-ink-black bg-forest-deep text-paper-cream flex flex-col hover:-translate-y-2 transition-transform">
+      <div class="h-52 overflow-hidden border-b-2 border-ink-black bg-ink-black flex items-center justify-center"><span class="material-symbols-outlined text-marker-yellow text-7xl">mail</span></div>
+      <div class="p-6 flex-grow">
+        <h3 class="font-headline-md text-headline-md mb-2 text-marker-yellow">信件代收 / 借址登記</h3>
+        <p class="text-sm text-paper-cream/75 mb-4">公司登記地址、郵件代收，創業初期的最佳起點。</p>
+        <ul class="space-y-2 font-label-sm text-label-sm">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-marker-yellow text-base">check_circle</span> 月租 NT$1,800 / 年繳 NT$21,600</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-marker-yellow text-base">check_circle</span> 郵件代收、到件通知</li>
+        </ul>
+      </div>
+      <button data-modal-open="visit-modal" data-title="借址登記服務" class="py-4 bg-marker-yellow text-ink-black font-label-md hover:bg-rebel-orange transition-all">了解借址服務</button>
+    </div>
+  </div>
+</section>
+
+<!-- 三種使用方式 -->
+<section class="bg-forest-deep text-paper-cream py-24 border-y-4 border-ink-black doodle-bg">
+  <div class="max-w-7xl mx-auto px-container-padding">
+    <div class="text-center mb-16 reveal">
+      <h2 class="font-display text-headline-lg md:text-display-lg font-extrabold text-marker-yellow mb-3">三種使用方式，彈性進駐</h2>
+      <p class="font-body-lg text-body-lg text-paper-cream/80">依工作模式、人數、需求，選擇最適合你的方案。</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- 駐點 -->
+      <div class="reveal bg-paper-cream text-ink-black border-4 border-ink-black p-8 hard-shadow relative">
+        <span class="absolute -top-5 left-6 bg-rebel-orange text-paper-cream px-4 py-1 border-2 border-ink-black font-label-sm text-label-sm">MEMBER</span>
+        <h3 class="font-headline-lg text-headline-lg mb-1">會員駐點</h3>
+        <p class="text-on-surface-variant font-label-sm text-label-sm mb-4">單日 / 月租彈性選擇</p>
+        <div class="font-display text-3xl font-extrabold mb-6">NT$350 <span class="text-base font-normal text-on-surface-variant">/ 日起</span></div>
+        <ul class="space-y-2 text-sm text-on-surface-variant mb-8">
+          <li>• 開放式共用空間，自由入座</li>
+          <li>• 高速網路、插座、免費咖啡茶水</li>
+          <li>• 學程會員 / Founders Fellow 免費使用</li>
+        </ul>
+        <button data-modal-open="visit-modal" data-title="會員駐點方案" class="w-full py-3 bg-ink-black text-paper-cream font-label-md border-2 border-ink-black hover:bg-forest-deep transition-all">了解駐點</button>
+      </div>
+      <!-- 會議室 -->
+      <div class="reveal bg-marker-yellow text-ink-black border-4 border-ink-black p-8 hard-shadow relative">
+        <span class="absolute -top-5 left-6 bg-forest-deep text-paper-cream px-4 py-1 border-2 border-ink-black font-label-sm text-label-sm">BOOKING</span>
+        <h3 class="font-headline-lg text-headline-lg mb-1">會議室租借</h3>
+        <p class="text-ink-black/70 font-label-sm text-label-sm mb-4">小時計費，會員享 8 折</p>
+        <div class="font-display text-3xl font-extrabold mb-6">NT$900 <span class="text-base font-normal text-ink-black/60">/ 小時起</span></div>
+        <ul class="space-y-2 text-sm text-ink-black/80 mb-8">
+          <li>• 投影 / 螢幕、白板、視訊設備</li>
+          <li>• 主教室、大會議室、訪談室任選</li>
+          <li>• 線上預約、即時確認檔期</li>
+        </ul>
+        <button data-modal-open="visit-modal" data-title="會議室租借" class="w-full py-3 bg-forest-deep text-paper-cream font-label-md border-2 border-ink-black hover:bg-ink-black transition-all">立即預約</button>
+      </div>
+      <!-- 借址 -->
+      <div class="reveal bg-paper-cream text-ink-black border-4 border-ink-black p-8 hard-shadow relative">
+        <span class="absolute -top-5 left-6 bg-tech-cyan text-ink-black px-4 py-1 border-2 border-ink-black font-label-sm text-label-sm">MAILING</span>
+        <h3 class="font-headline-lg text-headline-lg mb-1">借址登記服務</h3>
+        <p class="text-on-surface-variant font-label-sm text-label-sm mb-4">公司登記 + 郵件代收</p>
+        <div class="font-display text-3xl font-extrabold mb-6">NT$1,800 <span class="text-base font-normal text-on-surface-variant">/ 月</span></div>
+        <ul class="space-y-2 text-sm text-on-surface-variant mb-8">
+          <li>• 提供公司登記地址</li>
+          <li>• 郵件代收與到件通知</li>
+          <li>• 年繳 NT$21,600，創業最划算起點</li>
+        </ul>
+        <button data-modal-open="visit-modal" data-title="借址登記服務" class="w-full py-3 bg-ink-black text-paper-cream font-label-md border-2 border-ink-black hover:bg-forest-deep transition-all">了解借址</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 為何選我們 -->
+<section class="max-w-7xl mx-auto px-container-padding py-24 grid md:grid-cols-2 gap-16 items-center">
+  <div class="reveal">
+    <h2 class="font-display text-headline-lg md:text-display-lg font-extrabold mb-10">為何 404TABLE 是<br/><span class="text-rebel-orange">最適合創作者</span>的空間</h2>
+    <div class="grid sm:grid-cols-2 gap-8">
+      <div class="flex gap-4"><span class="material-symbols-outlined text-rebel-orange text-3xl">location_on</span><div><h4 class="font-headline-md text-lg mb-1">絕佳位置</h4><p class="text-sm text-on-surface-variant">鄰近捷運與文創園區，交通便利、生活機能完整。</p></div></div>
+      <div class="flex gap-4"><span class="material-symbols-outlined text-rebel-orange text-3xl">air</span><div><h4 class="font-headline-md text-lg mb-1">清新空氣</h4><p class="text-sm text-on-surface-variant">醫療級空氣清淨、多面採光、通風舒適。</p></div></div>
+      <div class="flex gap-4"><span class="material-symbols-outlined text-rebel-orange text-3xl">coffee</span><div><h4 class="font-headline-md text-lg mb-1">茶水供應</h4><p class="text-sm text-on-surface-variant">免費現磨咖啡、多款茶飲、不定期零食。</p></div></div>
+      <div class="flex gap-4"><span class="material-symbols-outlined text-rebel-orange text-3xl">groups</span><div><h4 class="font-headline-md text-lg mb-1">創意社群</h4><p class="text-sm text-on-surface-variant">匯集各界職人與創業者，定期舉辦交流活動。</p></div></div>
+    </div>
+  </div>
+  <div class="relative reveal">
+    <div class="border-4 border-ink-black p-3 hard-shadow bg-white rotate-2"><img src="assets/space/space-main-2.jpg" alt="工作空間" class="w-full grayscale"/></div>
+    <div class="absolute -bottom-8 -left-6 bg-marker-yellow p-6 border-2 border-ink-black -rotate-3">
+      <div class="font-headline-md text-lg">Google 評價 4.8★</div>
+      <div class="font-label-sm text-label-sm">創作者口碑推薦</div>
+    </div>
+  </div>
+</section>
+
+<!-- 評價 -->
+<section class="bg-surface-container-low py-24 border-t-2 border-ink-black">
+  <div class="max-w-7xl mx-auto px-container-padding">
+    <div class="flex items-center gap-4 mb-12 reveal"><span class="material-symbols-outlined text-rebel-orange text-4xl">format_quote</span><h2 class="font-display text-headline-lg font-extrabold">創作者的真心話</h2></div>
+    <div class="grid md:grid-cols-2 gap-card-gap reveal">
+      <div class="bg-white border-2 border-ink-black p-8"><p class="font-body-lg text-body-lg mb-8 italic">「每次有訪客來開會，都會羨慕地說也想在這裡上班。空間的質感，讓我們的品牌加分不少。」</p><div class="flex items-center gap-4"><div class="w-12 h-12 bg-forest-deep flex items-center justify-center text-paper-cream font-bold">徐</div><div><h4 class="font-label-md text-label-md font-bold">徐先生</h4><p class="font-label-sm text-label-sm text-on-surface-variant">新創品牌共同創辦人</p></div></div></div>
+      <div class="bg-white border-2 border-ink-black p-8"><p class="font-body-lg text-body-lg mb-8 italic">「環境舒服、人也很好，最適合需要安靜專注又想偶爾交流的工作者。強力推薦給接案族與小團隊。」</p><div class="flex items-center gap-4"><div class="w-12 h-12 bg-rebel-orange flex items-center justify-center text-paper-cream font-bold">L</div><div><h4 class="font-label-md text-label-md font-bold">Lydia</h4><p class="font-label-sm text-label-sm text-on-surface-variant">自由接案設計師</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 text-center bg-marker-yellow border-y-4 border-ink-black">
+  <div class="max-w-3xl mx-auto px-container-padding reveal">
+    <h2 class="font-display text-headline-lg md:text-display-lg font-extrabold mb-5">準備好開始你的創作旅程嗎？</h2>
+    <p class="font-body-lg text-body-lg mb-10">只需帶著你的筆電，其餘的交給我們。來參觀吧，感受有溫度的共創空間。</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-8">
+      <button data-modal-open="visit-modal" class="bg-ink-black text-paper-cream px-12 py-5 font-label-md border-2 border-ink-black hard-shadow press">立即預約參觀</button>
+      <div class="flex flex-col items-center"><p class="font-label-sm text-label-sm text-ink-black/70 mb-1">來電洽詢</p><a href="tel:0223456789" class="font-display text-3xl font-extrabold text-rebel-orange hover:scale-105 transition-transform">02-2345-6789</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- 預約 Modal -->
+<div id="visit-modal" class="modal-backdrop">
+  <div class="modal-card p-8">
+    <div class="flex justify-between items-start mb-6">
+      <div><span class="font-label-sm text-label-sm text-rebel-orange">空間預約 / 詢問</span><h3 class="font-display text-2xl font-extrabold mt-1" data-fill-title>預約參觀</h3></div>
+      <button data-modal-close class="w-10 h-10 border-2 border-ink-black flex items-center justify-center" aria-label="關閉"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <form data-fake-submit data-success="已收到預約！我們會盡快與你確認時間與檔期。">
+      <input type="hidden" name="項目"/>
+      <div class="space-y-5">
+        <div><label class="font-label-md text-label-md block mb-1">姓名 *</label><input required type="text" class="field" placeholder="王小明"/></div>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div><label class="font-label-md text-label-md block mb-1">Email *</label><input required type="email" class="field" placeholder="you@email.com"/></div>
+          <div><label class="font-label-md text-label-md block mb-1">手機 *</label><input required type="tel" class="field" placeholder="0912-345-678"/></div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div><label class="font-label-md text-label-md block mb-1">需求類型</label>
+            <select class="field"><option>預約參觀</option><option>會議室租借</option><option>會員駐點</option><option>借址登記</option><option>活動 / 包場</option></select></div>
+          <div><label class="font-label-md text-label-md block mb-1">期望日期</label><input type="date" class="field"/></div>
+        </div>
+        <div><label class="font-label-md text-label-md block mb-1">備註</label><textarea rows="2" class="field resize-none" placeholder="使用人數、時段、特殊需求…"></textarea></div>
+      </div>
+      <button type="submit" class="w-full mt-7 bg-forest-deep text-paper-cream py-4 border-2 border-ink-black font-label-md hard-shadow-yellow press">送出預約</button>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-forest-deep text-paper-cream pt-16 pb-8 border-t-4 border-marker-yellow">
+  <div class="max-w-7xl mx-auto px-container-padding grid md:grid-cols-12 gap-12">
+    <div class="md:col-span-4">
+      <img src="assets/brand/logo-white.png" alt="404TABLE" class="h-10 w-auto mb-5"/>
+      <p class="text-paper-cream/70 max-w-xs mb-4">AI 教育 × 共創空間 × 創業加速。在這裡，讓學習、空間與創業發光連結。</p>
+      <p class="font-label-sm text-label-sm text-paper-cream/60">台北市信義區基隆路一段 404 號 4 樓<br/>service@404table.com｜02-2345-6789</p>
+    </div>
+    <div class="md:col-span-2"><h5 class="font-label-md text-label-md text-marker-yellow mb-4">學習</h5><ul class="space-y-3 font-label-sm text-label-sm"><li><a href="courses.html" class="text-paper-cream/75 hover:text-rebel-orange">學程總覽</a></li><li><a href="founders.html" class="text-paper-cream/75 hover:text-rebel-orange">404 Founders</a></li><li><a href="events.html" class="text-paper-cream/75 hover:text-rebel-orange">活動消息</a></li></ul></div>
+    <div class="md:col-span-2"><h5 class="font-label-md text-label-md text-marker-yellow mb-4">關於</h5><ul class="space-y-3 font-label-sm text-label-sm"><li><a href="space.html" class="text-paper-cream/75 hover:text-rebel-orange">實體空間</a></li><li><a href="about.html" class="text-paper-cream/75 hover:text-rebel-orange">關於我們</a></li><li><a href="about.html#contact" class="text-paper-cream/75 hover:text-rebel-orange">聯絡 / 企業包班</a></li></ul></div>
+    <div class="md:col-span-4"><h5 class="font-label-md text-label-md text-marker-yellow mb-4">訂閱電子報</h5>
+      <form data-fake-submit data-success="訂閱成功！第一封信很快會到你的信箱。" class="flex">
+        <input type="email" required placeholder="your@email.com" class="flex-grow bg-paper-cream text-ink-black border-2 border-paper-cream px-4 py-2 focus:outline-none font-label-md text-label-md"/>
+        <button class="bg-marker-yellow text-ink-black px-5 font-label-md border-2 border-paper-cream border-l-0">GO</button>
+      </form>
+      <p class="font-label-sm text-label-sm text-paper-cream/55 mt-4">每週一篇 AI 工作流 essay，不寄垃圾信。</p>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-container-padding mt-14 pt-6 border-t border-paper-cream/15 flex flex-col md:flex-row justify-between gap-3 font-label-sm text-label-sm text-paper-cream/50">
+    <span>© 2026 404TABLE｜肆方創育股份有限公司</span>
+    <span class="flex gap-6"><a href="#" class="hover:text-rebel-orange">隱私權政策</a><a href="#" class="hover:text-rebel-orange">服務條款</a><a href="#" class="hover:text-rebel-orange">退費政策</a></span>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>學程總覽｜404TABLE｜6 堂職業 × AI 應用課程</title>
+<meta name="description" content="行銷、業務、HR、教學、設計、一人公司——6 堂職業 × AI 應用課程，每堂課都長出可帶走的個人作品集。"/>
+<link rel="icon" href="assets/brand/logo-black.png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/tw-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+  [data-filter].is-active { background:#F2C14E; box-shadow:4px 4px 0 0 #111; }
+  details.unit > summary { list-style:none; cursor:pointer; }
+  details.unit > summary::-webkit-details-marker { display:none; }
+  details.unit[open] .chev { transform: rotate(180deg); }
+</style>
+<script src="js/site.js" defer></script>
+</head>
+<body class="paper-grid bg-paper-cream text-ink-black font-body-md selection:bg-marker-yellow selection:text-ink-black overflow-x-hidden">
+<div id="scroll-progress"></div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-paper-cream/95 backdrop-blur border-b-2 border-ink-black shadow-[4px_4px_0px_0px_rgba(11,51,43,1)]">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-container-padding h-20">
+    <a href="index.html" class="flex items-center gap-3 shrink-0"><img src="assets/brand/logo-black.png" alt="404TABLE" class="h-9 w-auto"/></a>
+    <nav class="hidden md:flex items-center gap-7 font-label-md text-label-md">
+      <a href="courses.html" class="text-rebel-orange font-bold border-b-2 border-rebel-orange">學程</a>
+      <a href="founders.html" class="hover:text-rebel-orange transition-colors">創業孵化</a>
+      <a href="space.html" class="hover:text-rebel-orange transition-colors">空間</a>
+      <a href="events.html" class="hover:text-rebel-orange transition-colors">活動</a>
+      <a href="about.html" class="hover:text-rebel-orange transition-colors">關於</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#courses" class="hidden sm:inline-flex items-center bg-forest-deep text-paper-cream px-5 py-2.5 border-2 border-ink-black font-label-md text-label-md hard-shadow-yellow press">立即報名</a>
+      <button id="menu-open" class="md:hidden w-11 h-11 border-2 border-ink-black flex items-center justify-center" aria-label="選單"><span class="material-symbols-outlined">menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="mobile-drawer" class="closed fixed inset-0 z-[60] bg-forest-deep text-paper-cream md:hidden flex flex-col p-8">
+  <div class="flex justify-between items-center mb-12">
+    <img src="assets/brand/logo-white.png" alt="404TABLE" class="h-9 w-auto"/>
+    <button id="menu-close" class="w-11 h-11 border-2 border-paper-cream flex items-center justify-center" aria-label="關閉"><span class="material-symbols-outlined">close</span></button>
+  </div>
+  <nav class="flex flex-col gap-7 font-display text-4xl font-extrabold">
+    <a href="courses.html">學程</a><a href="founders.html">創業孵化</a><a href="space.html">空間</a><a href="events.html">活動</a><a href="about.html">關於</a>
+  </nav>
+</div>
+
+<main>
+<!-- Hero -->
+<section class="relative overflow-hidden border-b-4 border-ink-black">
+  <div class="absolute inset-0 scribble-bg opacity-30"></div>
+  <div class="relative max-w-7xl mx-auto px-container-padding py-20 text-center">
+    <span class="inline-block bg-marker-yellow border-2 border-ink-black px-4 py-1.5 font-label-md text-label-md -rotate-2 mb-6">職業 × AI 應用 · 2026 Q3</span>
+    <h1 class="font-display text-4xl md:text-6xl font-extrabold leading-tight mb-6">我們不教 AI 工具，<br/>教你的職業<span class="rebel-underline">被 AI 重新顯示</span></h1>
+    <p class="font-body-lg text-body-lg max-w-2xl mx-auto bg-white/80 border-2 border-ink-black p-5 hard-shadow-sm">
+      6 堂課，對應 6 種職業。每堂課從你真實的工作痛點出發，課程結束，你帶走的不是筆記，是一套可以馬上用的個人 AI 工作流與作品集。
+    </p>
+    <div class="flex flex-wrap justify-center gap-6 mt-8 font-label-md text-label-md">
+      <span class="flex items-center gap-2"><span class="material-symbols-outlined text-rebel-orange">groups</span> 小班制 · 現役業師</span>
+      <span class="flex items-center gap-2"><span class="material-symbols-outlined text-marker-yellow">workspace_premium</span> 完課作品集</span>
+      <span class="flex items-center gap-2"><span class="material-symbols-outlined text-forest-deep">handshake</span> 企業實戰媒合</span>
+    </div>
+  </div>
+  <div class="absolute -bottom-8 -left-8 w-44 h-44 bg-rebel-orange border-4 border-ink-black rotate-12 hidden md:flex items-center justify-center"><span class="font-display text-paper-cream text-5xl font-extrabold">AI</span></div>
+</section>
+
+<!-- Filter -->
+<section class="max-w-7xl mx-auto px-container-padding pt-12">
+  <div class="flex flex-wrap gap-3 reveal">
+    <button data-filter="all" class="is-active px-5 py-2.5 border-2 border-ink-black font-label-md text-label-md transition-all">全部課程</button>
+    <button data-filter="行銷企劃" class="px-5 py-2.5 border-2 border-ink-black bg-white font-label-md text-label-md hover:bg-marker-yellow/30 transition-all">行銷企劃</button>
+    <button data-filter="業務銷售" class="px-5 py-2.5 border-2 border-ink-black bg-white font-label-md text-label-md hover:bg-marker-yellow/30 transition-all">業務銷售</button>
+    <button data-filter="HR招募" class="px-5 py-2.5 border-2 border-ink-black bg-white font-label-md text-label-md hover:bg-marker-yellow/30 transition-all">HR 招募</button>
+    <button data-filter="教學設計" class="px-5 py-2.5 border-2 border-ink-black bg-white font-label-md text-label-md hover:bg-marker-yellow/30 transition-all">教學設計</button>
+    <button data-filter="設計工作流" class="px-5 py-2.5 border-2 border-ink-black bg-white font-label-md text-label-md hover:bg-marker-yellow/30 transition-all">設計工作流</button>
+    <button data-filter="一人公司" class="px-5 py-2.5 border-2 border-ink-black bg-white font-label-md text-label-md hover:bg-marker-yellow/30 transition-all">一人公司</button>
+  </div>
+</section>
+
+<!-- Courses -->
+<section id="courses" class="max-w-7xl mx-auto px-container-padding py-12 space-y-12">
+
+  <!-- ===== C1 行銷 ===== -->
+  <article id="c-mkt" data-cat="行銷企劃" class="reveal scroll-mt-28 bg-white border-2 border-ink-black hard-shadow">
+    <div class="grid lg:grid-cols-3">
+      <div class="lg:col-span-2 p-8 border-b-2 lg:border-b-0 lg:border-r-2 border-ink-black">
+        <div class="flex items-center justify-between mb-4">
+          <span class="bg-marker-yellow border border-ink-black px-3 py-1 font-label-sm text-label-sm">AI × 行銷企劃</span>
+          <span class="font-mono text-label-sm text-on-surface-variant">C-MKT-01</span>
+        </div>
+        <h2 class="font-display text-3xl md:text-4xl font-extrabold mb-2">AI 接住你的 KPI</h2>
+        <p class="text-on-surface-variant mb-6">給天天被要求做爆款文案、卻沒時間想的行銷企劃、品牌經理、社群小編、廣告投手。</p>
+        <p class="font-body-lg text-body-lg mb-6"><span class="font-bold text-forest-deep">主訴求：</span>從接到 brief 到 campaign 上線，從 5 天壓到 1 天。</p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">ChatGPT</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Claude</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Midjourney</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Canva</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">HeyGen</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Notion AI</span>
+        </div>
+        <details class="unit border-2 border-ink-black">
+          <summary class="flex items-center justify-between bg-surface-container px-5 py-3 font-label-md text-label-md">8 週完整課綱 <span class="chev material-symbols-outlined transition-transform">expand_more</span></summary>
+          <ul class="divide-y divide-ink-black/10 px-5 py-2">
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W1</span><span>AI 寫客戶買單的廣告文案（FAB → CTA）</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W2</span><span>Midjourney + Canva 30 分鐘做設計師等級視覺</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W3</span><span>用 AI 做受眾洞察、競品分析</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W4</span><span>campaign 從 brief 到落地的工作流自動化</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W5</span><span>社群內容工廠：一週產出 30 篇貼文</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W6</span><span>用 AI 寫廣告投放素材 A/B test</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W7</span><span>成效追蹤與 AI 分析儀表板</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W8</span><span>個人作品集 demo day（推薦給合作企業）</span></li>
+          </ul>
+        </details>
+        <p class="mt-5 text-sm text-on-surface-variant"><span class="font-bold text-forest-deep">學員產出：</span>個人作品集（含 5 套 campaign 範例 + 工作流模板）</p>
+      </div>
+      <div class="p-8 flex flex-col bg-surface-container-low">
+        <div class="grid grid-cols-3 gap-2 mb-6 text-center">
+          <div><div class="font-display text-2xl font-extrabold">8</div><div class="font-label-sm text-label-sm text-on-surface-variant">週</div></div>
+          <div><div class="font-display text-2xl font-extrabold">24</div><div class="font-label-sm text-label-sm text-on-surface-variant">小時</div></div>
+          <div><div class="font-display text-2xl font-extrabold text-rebel-orange">NT$15,800</div><div class="font-label-sm text-label-sm text-on-surface-variant">早鳥</div></div>
+        </div>
+        <div class="flex items-center gap-3 mb-6 pb-6 border-b border-ink-black/10">
+          <img src="assets/teachers/bogi.jpg" alt="Bogi" class="w-14 h-14 object-cover border-2 border-ink-black"/>
+          <div><div class="font-headline-md text-lg leading-none">Bogi</div><div class="font-label-sm text-label-sm text-rebel-orange mt-1">主講師 · 前 4A 廣告創意總監</div></div>
+        </div>
+        <p class="font-label-sm text-label-sm text-on-surface-variant mb-2">週三 19:00–22:00｜原價 NT$18,800</p>
+        <div class="mt-auto space-y-3">
+          <button data-modal-open="signup-modal" data-title="AI 接住你的 KPI（C-MKT-01）" class="w-full bg-ink-black text-paper-cream py-3 border-2 border-ink-black font-label-md hard-shadow-yellow press">立即報名</button>
+          <button onclick="tableToast('已收到試聽申請，將寄送試聽連結到你的信箱')" class="w-full bg-white py-3 border-2 border-ink-black font-label-md hover:bg-marker-yellow/30 transition-colors">免費試聽</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== C2 業務 ===== -->
+  <article id="c-sales" data-cat="業務銷售" class="reveal scroll-mt-28 bg-white border-2 border-ink-black hard-shadow">
+    <div class="grid lg:grid-cols-3">
+      <div class="lg:col-span-2 p-8 border-b-2 lg:border-b-0 lg:border-r-2 border-ink-black">
+        <div class="flex items-center justify-between mb-4">
+          <span class="bg-marker-yellow border border-ink-black px-3 py-1 font-label-sm text-label-sm">AI × 業務銷售</span>
+          <span class="font-mono text-label-sm text-on-surface-variant">C-SALES-02</span>
+        </div>
+        <h2 class="font-display text-3xl md:text-4xl font-extrabold mb-2">AI 幫你接單，你負責成交</h2>
+        <p class="text-on-surface-variant mb-6">給拿不下單就吃土、跑業務跑到沒命的 B2B / B2C 業務、保險、房仲、SaaS 業務。</p>
+        <p class="font-body-lg text-body-lg mb-6"><span class="font-bold text-forest-deep">主訴求：</span>把每天 1 個有效客戶的產能變成 3 個。</p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Claude</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">ChatGPT</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">HubSpot AI</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Apollo</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Gong</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Loom</span>
+        </div>
+        <details class="unit border-2 border-ink-black">
+          <summary class="flex items-center justify-between bg-surface-container px-5 py-3 font-label-md text-label-md">6 週完整課綱 <span class="chev material-symbols-outlined transition-transform">expand_more</span></summary>
+          <ul class="divide-y divide-ink-black/10 px-5 py-2">
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W1</span><span>自動寫初訪信、follow up 信、提案信</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W2</span><span>用 AI 分析客戶痛點、推估成交時機</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W3</span><span>建你自己的 CRM AI（Claude API + Sheets）</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W4</span><span>自動產出客戶報告與下次拜訪策略</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W5</span><span>把每天 8 小時的雜事壓到 2 小時</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W6</span><span>個人 sales playbook demo</span></li>
+          </ul>
+        </details>
+        <p class="mt-5 text-sm text-on-surface-variant"><span class="font-bold text-forest-deep">學員產出：</span>個人 sales AI workflow（prompt 庫 + 信件模板 + 追蹤儀表板）</p>
+      </div>
+      <div class="p-8 flex flex-col bg-surface-container-low">
+        <div class="grid grid-cols-3 gap-2 mb-6 text-center">
+          <div><div class="font-display text-2xl font-extrabold">6</div><div class="font-label-sm text-label-sm text-on-surface-variant">週</div></div>
+          <div><div class="font-display text-2xl font-extrabold">18</div><div class="font-label-sm text-label-sm text-on-surface-variant">小時</div></div>
+          <div><div class="font-display text-2xl font-extrabold text-rebel-orange">NT$13,800</div><div class="font-label-sm text-label-sm text-on-surface-variant">早鳥</div></div>
+        </div>
+        <div class="flex items-center gap-3 mb-6 pb-6 border-b border-ink-black/10">
+          <img src="assets/teachers/wayne.jpg" alt="Wayne" class="w-14 h-14 object-cover border-2 border-ink-black"/>
+          <div><div class="font-headline-md text-lg leading-none">Wayne</div><div class="font-label-sm text-label-sm text-rebel-orange mt-1">主講師 · SaaS 業務副總</div></div>
+        </div>
+        <p class="font-label-sm text-label-sm text-on-surface-variant mb-2">週二 19:00–22:00｜原價 NT$16,800</p>
+        <div class="mt-auto space-y-3">
+          <button data-modal-open="signup-modal" data-title="AI 幫你接單，你負責成交（C-SALES-02）" class="w-full bg-ink-black text-paper-cream py-3 border-2 border-ink-black font-label-md hard-shadow-yellow press">立即報名</button>
+          <button onclick="tableToast('已收到試聽申請，將寄送試聽連結到你的信箱')" class="w-full bg-white py-3 border-2 border-ink-black font-label-md hover:bg-marker-yellow/30 transition-colors">免費試聽</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== C3 HR ===== -->
+  <article id="c-hr" data-cat="HR招募" class="reveal scroll-mt-28 bg-white border-2 border-ink-black hard-shadow">
+    <div class="grid lg:grid-cols-3">
+      <div class="lg:col-span-2 p-8 border-b-2 lg:border-b-0 lg:border-r-2 border-ink-black">
+        <div class="flex items-center justify-between mb-4">
+          <span class="bg-marker-yellow border border-ink-black px-3 py-1 font-label-sm text-label-sm">AI × HR 招募</span>
+          <span class="font-mono text-label-sm text-on-surface-variant">C-HR-03</span>
+        </div>
+        <h2 class="font-display text-3xl md:text-4xl font-extrabold mb-2">AI 一週做完你三週的 HR 工作</h2>
+        <p class="text-on-surface-variant mb-6">給每天看 100 封履歷、寫 JD 寫到斷氣的 HR 招募、HRBP、訓練發展、企業內訓。</p>
+        <p class="font-body-lg text-body-lg mb-6"><span class="font-bold text-forest-deep">主訴求：</span>把 HR 行政壓到 1/3，把時間還給人才策略。</p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">ChatGPT</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Claude</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Workday AI</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Pinpoint</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">HiBob</span>
+        </div>
+        <details class="unit border-2 border-ink-black">
+          <summary class="flex items-center justify-between bg-surface-container px-5 py-3 font-label-md text-label-md">6 週完整課綱 <span class="chev material-symbols-outlined transition-transform">expand_more</span></summary>
+          <ul class="divide-y divide-ink-black/10 px-5 py-2">
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W1</span><span>用 AI 篩履歷（含自動避開歧視用語）</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W2</span><span>JD 工廠：一份職缺 30 分鐘出來</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W3</span><span>面試題庫與行為面試自動評分</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W4</span><span>員工訓練手冊一週寫好上線</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W5</span><span>用數據預測離職風險、做留才機制</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W6</span><span>個人 HR AI dashboard demo</span></li>
+          </ul>
+        </details>
+        <p class="mt-5 text-sm text-on-surface-variant"><span class="font-bold text-forest-deep">學員產出：</span>個人 HR workflow toolkit（篩履歷 prompt + JD 範本 + 訓練手冊範本）</p>
+      </div>
+      <div class="p-8 flex flex-col bg-surface-container-low">
+        <div class="grid grid-cols-3 gap-2 mb-6 text-center">
+          <div><div class="font-display text-2xl font-extrabold">6</div><div class="font-label-sm text-label-sm text-on-surface-variant">週</div></div>
+          <div><div class="font-display text-2xl font-extrabold">18</div><div class="font-label-sm text-label-sm text-on-surface-variant">小時</div></div>
+          <div><div class="font-display text-2xl font-extrabold text-rebel-orange">NT$13,800</div><div class="font-label-sm text-label-sm text-on-surface-variant">早鳥</div></div>
+        </div>
+        <div class="flex items-center gap-3 mb-6 pb-6 border-b border-ink-black/10">
+          <img src="assets/teachers/wendy.jpg" alt="Wendy" class="w-14 h-14 object-cover border-2 border-ink-black"/>
+          <div><div class="font-headline-md text-lg leading-none">Wendy</div><div class="font-label-sm text-label-sm text-rebel-orange mt-1">主講師 · 科技業招募主管</div></div>
+        </div>
+        <p class="font-label-sm text-label-sm text-on-surface-variant mb-2">週四 19:00–22:00｜原價 NT$16,800</p>
+        <div class="mt-auto space-y-3">
+          <button data-modal-open="signup-modal" data-title="AI 一週做完你三週的 HR 工作（C-HR-03）" class="w-full bg-ink-black text-paper-cream py-3 border-2 border-ink-black font-label-md hard-shadow-yellow press">立即報名</button>
+          <button onclick="tableToast('已收到試聽申請，將寄送試聽連結到你的信箱')" class="w-full bg-white py-3 border-2 border-ink-black font-label-md hover:bg-marker-yellow/30 transition-colors">免費試聽</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== C4 教學 ===== -->
+  <article id="c-edu" data-cat="教學設計" class="reveal scroll-mt-28 bg-white border-2 border-ink-black hard-shadow">
+    <div class="grid lg:grid-cols-3">
+      <div class="lg:col-span-2 p-8 border-b-2 lg:border-b-0 lg:border-r-2 border-ink-black">
+        <div class="flex items-center justify-between mb-4">
+          <span class="bg-marker-yellow border border-ink-black px-3 py-1 font-label-sm text-label-sm">AI × 教學設計</span>
+          <span class="font-mono text-label-sm text-on-surface-variant">C-EDU-04</span>
+        </div>
+        <h2 class="font-display text-3xl md:text-4xl font-extrabold mb-2">AI 給你 24 小時不休息的教學助理</h2>
+        <p class="text-on-surface-variant mb-6">給學校老師、補教名師、企業內訓、線上講師、家教。</p>
+        <p class="font-body-lg text-body-lg mb-6"><span class="font-bold text-forest-deep">主訴求：</span>從零生出 8 週課程的完整課綱、教材、考題。</p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">ChatGPT</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Claude</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">NotebookLM</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">HeyGen</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Synthesia</span>
+        </div>
+        <details class="unit border-2 border-ink-black">
+          <summary class="flex items-center justify-between bg-surface-container px-5 py-3 font-label-md text-label-md">8 週完整課綱 <span class="chev material-symbols-outlined transition-transform">expand_more</span></summary>
+          <ul class="divide-y divide-ink-black/10 px-5 py-2">
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W1</span><span>用 AI 生課綱（學習目標 → 評量 → 內容對齊）</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W2</span><span>教材自動產出與分層難度</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W3</span><span>考題庫與診斷式測驗</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W4</span><span>個人化學習進度設計</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W5</span><span>用 AI 影片做翻轉教學</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W6</span><span>學員問答 AI 助教</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W7</span><span>成效分析與留存策略</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W8</span><span>個人課程 demo</span></li>
+          </ul>
+        </details>
+        <p class="mt-5 text-sm text-on-surface-variant"><span class="font-bold text-forest-deep">學員產出：</span>一套可上架的 8 週課程包（課綱 + 教材 + 評量 + AI 助教）</p>
+      </div>
+      <div class="p-8 flex flex-col bg-surface-container-low">
+        <div class="grid grid-cols-3 gap-2 mb-6 text-center">
+          <div><div class="font-display text-2xl font-extrabold">8</div><div class="font-label-sm text-label-sm text-on-surface-variant">週</div></div>
+          <div><div class="font-display text-2xl font-extrabold">24</div><div class="font-label-sm text-label-sm text-on-surface-variant">小時</div></div>
+          <div><div class="font-display text-2xl font-extrabold text-rebel-orange">NT$15,800</div><div class="font-label-sm text-label-sm text-on-surface-variant">早鳥</div></div>
+        </div>
+        <div class="flex items-center gap-3 mb-6 pb-6 border-b border-ink-black/10">
+          <img src="assets/teachers/kevin.jpg" alt="凱文" class="w-14 h-14 object-cover border-2 border-ink-black"/>
+          <div><div class="font-headline-md text-lg leading-none">凱文</div><div class="font-label-sm text-label-sm text-rebel-orange mt-1">主講師 · 線上課程製作人</div></div>
+        </div>
+        <p class="font-label-sm text-label-sm text-on-surface-variant mb-2">週六 14:00–17:00｜原價 NT$18,800</p>
+        <div class="mt-auto space-y-3">
+          <button data-modal-open="signup-modal" data-title="AI 給你 24 小時不休息的教學助理（C-EDU-04）" class="w-full bg-ink-black text-paper-cream py-3 border-2 border-ink-black font-label-md hard-shadow-yellow press">立即報名</button>
+          <button onclick="tableToast('已收到試聽申請，將寄送試聽連結到你的信箱')" class="w-full bg-white py-3 border-2 border-ink-black font-label-md hover:bg-marker-yellow/30 transition-colors">免費試聽</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== C5 設計 ===== -->
+  <article id="c-design" data-cat="設計工作流" class="reveal scroll-mt-28 bg-white border-2 border-ink-black hard-shadow">
+    <div class="grid lg:grid-cols-3">
+      <div class="lg:col-span-2 p-8 border-b-2 lg:border-b-0 lg:border-r-2 border-ink-black">
+        <div class="flex items-center justify-between mb-4">
+          <span class="bg-marker-yellow border border-ink-black px-3 py-1 font-label-sm text-label-sm">AI × 設計工作流</span>
+          <span class="font-mono text-label-sm text-on-surface-variant">C-DESIGN-05</span>
+        </div>
+        <h2 class="font-display text-3xl md:text-4xl font-extrabold mb-2">AI 把你變成 3 倍速設計師</h2>
+        <p class="text-on-surface-variant mb-6">給接案接到沒時間吃飯的平面設計、UI/UX、品牌設計、接案族、自由工作者。</p>
+        <p class="font-body-lg text-body-lg mb-6"><span class="font-bold text-forest-deep">主訴求：</span>一個人接案，做出一整間工作室的產能。</p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Midjourney</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Figma AI</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Photoshop AI</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Runway</span>
+          <span class="font-label-sm text-label-sm border border-ink-black px-2 py-1">Magnific</span>
+        </div>
+        <details class="unit border-2 border-ink-black">
+          <summary class="flex items-center justify-between bg-surface-container px-5 py-3 font-label-md text-label-md">6 週完整課綱 <span class="chev material-symbols-outlined transition-transform">expand_more</span></summary>
+          <ul class="divide-y divide-ink-black/10 px-5 py-2">
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W1</span><span>Midjourney + Figma AI 加速稿件與提案</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W2</span><span>客戶意見自動整理成改稿待辦清單</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W3</span><span>品牌系統 30 分鐘出 logo + VIS</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W4</span><span>UI 線稿 → 高保真 mockup 自動化</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W5</span><span>影片動態設計 AI 工作流</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-rebel-orange font-bold shrink-0">W6</span><span>個人接案 SOP demo</span></li>
+          </ul>
+        </details>
+        <p class="mt-5 text-sm text-on-surface-variant"><span class="font-bold text-forest-deep">學員產出：</span>個人設計 AI workflow（prompt 庫 + 提案範本 + 報價計算機）</p>
+      </div>
+      <div class="p-8 flex flex-col bg-surface-container-low">
+        <div class="grid grid-cols-3 gap-2 mb-6 text-center">
+          <div><div class="font-display text-2xl font-extrabold">6</div><div class="font-label-sm text-label-sm text-on-surface-variant">週</div></div>
+          <div><div class="font-display text-2xl font-extrabold">18</div><div class="font-label-sm text-label-sm text-on-surface-variant">小時</div></div>
+          <div><div class="font-display text-2xl font-extrabold text-rebel-orange">NT$16,800</div><div class="font-label-sm text-label-sm text-on-surface-variant">早鳥</div></div>
+        </div>
+        <div class="flex items-center gap-3 mb-6 pb-6 border-b border-ink-black/10">
+          <img src="assets/teachers/lily.jpg" alt="莉莉" class="w-14 h-14 object-cover border-2 border-ink-black"/>
+          <div><div class="font-headline-md text-lg leading-none">莉莉</div><div class="font-label-sm text-label-sm text-rebel-orange mt-1">主講師 · 品牌設計工作室主理人</div></div>
+        </div>
+        <p class="font-label-sm text-label-sm text-on-surface-variant mb-2">週日 14:00–17:00｜原價 NT$19,800</p>
+        <div class="mt-auto space-y-3">
+          <button data-modal-open="signup-modal" data-title="AI 把你變成 3 倍速設計師（C-DESIGN-05）" class="w-full bg-ink-black text-paper-cream py-3 border-2 border-ink-black font-label-md hard-shadow-yellow press">立即報名</button>
+          <button onclick="tableToast('已收到試聽申請，將寄送試聽連結到你的信箱')" class="w-full bg-white py-3 border-2 border-ink-black font-label-md hover:bg-marker-yellow/30 transition-colors">免費試聽</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== C6 一人公司（旗艦） ===== -->
+  <article id="c-solo" data-cat="一人公司" class="reveal scroll-mt-28 bg-forest-deep text-paper-cream border-2 border-ink-black hard-shadow-yellow">
+    <div class="grid lg:grid-cols-3">
+      <div class="lg:col-span-2 p-8 border-b-2 lg:border-b-0 lg:border-r-2 border-paper-cream/30">
+        <div class="flex items-center justify-between mb-4">
+          <span class="bg-rebel-orange text-ink-black border border-ink-black px-3 py-1 font-label-sm text-label-sm">AI × 一人公司 · 旗艦學程</span>
+          <span class="font-mono text-label-sm text-paper-cream/60">C-SOLO-06</span>
+        </div>
+        <h2 class="font-display text-3xl md:text-4xl font-extrabold mb-2 text-marker-yellow">不用團隊、不用創投，用 AI 開個自己的</h2>
+        <p class="text-paper-cream/75 mb-6">給想做自己的事、但卡在「要怎麼開始」的個人、Side Project 經營者、自由工作者轉型。</p>
+        <p class="font-body-lg text-body-lg mb-6"><span class="font-bold text-marker-yellow">主訴求：</span>從點子到第一筆收入的 90 天步驟拆解。</p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="font-label-sm text-label-sm border border-paper-cream/40 px-2 py-1">Cursor</span>
+          <span class="font-label-sm text-label-sm border border-paper-cream/40 px-2 py-1">v0</span>
+          <span class="font-label-sm text-label-sm border border-paper-cream/40 px-2 py-1">Lovable</span>
+          <span class="font-label-sm text-label-sm border border-paper-cream/40 px-2 py-1">Stripe</span>
+          <span class="font-label-sm text-label-sm border border-paper-cream/40 px-2 py-1">Resend</span>
+          <span class="font-label-sm text-label-sm border border-paper-cream/40 px-2 py-1">Framer</span>
+          <span class="font-label-sm text-label-sm border border-paper-cream/40 px-2 py-1">Notion</span>
+        </div>
+        <details class="unit border-2 border-paper-cream/40">
+          <summary class="flex items-center justify-between bg-ink-black/30 px-5 py-3 font-label-md text-label-md">10 週完整課綱 <span class="chev material-symbols-outlined transition-transform">expand_more</span></summary>
+          <ul class="divide-y divide-paper-cream/15 px-5 py-2">
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-marker-yellow font-bold shrink-0">W1</span><span>用 AI 驗證點子（含 TAM 估算）</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-marker-yellow font-bold shrink-0">W2</span><span>用 v0 / Lovable 做第一版產品</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-marker-yellow font-bold shrink-0">W3</span><span>landing page + 收 email 名單</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-marker-yellow font-bold shrink-0">W4</span><span>找前 10 個付費客戶（不靠廣告）</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-marker-yellow font-bold shrink-0">W5</span><span>定價策略與商業模式設計</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-marker-yellow font-bold shrink-0">W6</span><span>訂閱制 / 一次性 / 服務制的選擇</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-marker-yellow font-bold shrink-0">W7</span><span>用 AI 做客服與 onboarding</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-marker-yellow font-bold shrink-0">W8</span><span>成長飛輪與留存設計</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-marker-yellow font-bold shrink-0">W9</span><span>營運自動化（金流、發票、報稅）</span></li>
+            <li class="py-2.5 flex gap-3"><span class="font-mono text-marker-yellow font-bold shrink-0">W10</span><span>90 天 demo day（推薦進 404 Founders）</span></li>
+          </ul>
+        </details>
+        <div class="mt-5 flex flex-wrap items-center gap-3 text-sm text-paper-cream/80">
+          <span><span class="font-bold text-marker-yellow">學員產出：</span>一個跑得起來的 MVP（含付費客戶 + 第一筆收入）</span>
+          <span class="bg-marker-yellow text-ink-black px-3 py-1 font-label-sm text-label-sm border border-ink-black">完課直接接 404 Founders 申請（免初審）</span>
+        </div>
+      </div>
+      <div class="p-8 flex flex-col">
+        <div class="grid grid-cols-3 gap-2 mb-6 text-center">
+          <div><div class="font-display text-2xl font-extrabold text-marker-yellow">10</div><div class="font-label-sm text-label-sm text-paper-cream/60">週</div></div>
+          <div><div class="font-display text-2xl font-extrabold text-marker-yellow">30</div><div class="font-label-sm text-label-sm text-paper-cream/60">小時</div></div>
+          <div><div class="font-display text-2xl font-extrabold text-marker-yellow">NT$23,800</div><div class="font-label-sm text-label-sm text-paper-cream/60">早鳥</div></div>
+        </div>
+        <div class="flex items-center gap-3 mb-6 pb-6 border-b border-paper-cream/20">
+          <img src="assets/teachers/ryan.jpg" alt="Ryan" class="w-14 h-14 object-cover border-2 border-paper-cream"/>
+          <div><div class="font-headline-md text-lg leading-none">Ryan</div><div class="font-label-sm text-label-sm text-marker-yellow mt-1">主講師 · 連續創業者 / 獨立開發者</div></div>
+        </div>
+        <p class="font-label-sm text-label-sm text-paper-cream/60 mb-2">週六 10:00–13:00｜原價 NT$28,800</p>
+        <div class="mt-auto space-y-3">
+          <button data-modal-open="signup-modal" data-title="不用團隊、不用創投，用 AI 開個自己的（C-SOLO-06）" class="w-full bg-marker-yellow text-ink-black py-3 border-2 border-ink-black font-label-md hard-shadow press">立即報名</button>
+          <button onclick="tableToast('已收到試聽申請，將寄送試聽連結到你的信箱')" class="w-full bg-transparent text-paper-cream py-3 border-2 border-paper-cream font-label-md hover:bg-paper-cream hover:text-ink-black transition-colors">免費試聽</button>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- 不確定選哪堂 -->
+<section class="py-20 bg-marker-yellow border-y-4 border-ink-black">
+  <div class="max-w-4xl mx-auto px-container-padding text-center reveal">
+    <h2 class="font-display text-3xl md:text-5xl font-extrabold mb-4">還不確定哪堂課適合你？</h2>
+    <p class="font-body-lg text-body-lg mb-8">花 30 秒，告訴我們你的職業與想解決的問題，我們幫你配一條學習路徑。</p>
+    <button data-modal-open="quiz-modal" class="bg-ink-black text-paper-cream px-10 py-4 border-2 border-ink-black font-label-md hard-shadow press">開始 30 秒測驗</button>
+  </div>
+</section>
+</main>
+
+<!-- 報名 Modal -->
+<div id="signup-modal" class="modal-backdrop">
+  <div class="modal-card p-8">
+    <div class="flex justify-between items-start mb-6">
+      <div>
+        <span class="font-label-sm text-label-sm text-rebel-orange">課程報名</span>
+        <h3 class="font-display text-2xl font-extrabold mt-1" data-fill-title>課程報名</h3>
+      </div>
+      <button data-modal-close class="w-10 h-10 border-2 border-ink-black flex items-center justify-center" aria-label="關閉"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <form data-fake-submit data-success="報名成功！我們會在 1–2 個工作天內寄送繳費與上課資訊。">
+      <input type="hidden" name="項目"/>
+      <div class="space-y-5">
+        <div><label class="font-label-md text-label-md block mb-1">姓名 *</label><input required type="text" class="field" placeholder="王小明"/></div>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div><label class="font-label-md text-label-md block mb-1">Email *</label><input required type="email" class="field" placeholder="you@email.com"/></div>
+          <div><label class="font-label-md text-label-md block mb-1">手機 *</label><input required type="tel" class="field" placeholder="0912-345-678"/></div>
+        </div>
+        <div><label class="font-label-md text-label-md block mb-1">你目前的職業</label><input type="text" class="field" placeholder="例如：電商品牌行銷"/></div>
+        <div><label class="font-label-md text-label-md block mb-1">最想用 AI 解決的問題</label><textarea rows="2" class="field resize-none" placeholder="例如：每週要產 30 篇社群貼文，人快爆了"></textarea></div>
+        <label class="flex items-start gap-3 font-label-sm text-label-sm"><input type="checkbox" required class="mt-0.5 w-5 h-5 border-2 border-ink-black rounded-none"/> 我同意 404TABLE 依隱私權政策使用我的資料與我聯絡。</label>
+      </div>
+      <button type="submit" class="w-full mt-7 bg-forest-deep text-paper-cream py-4 border-2 border-ink-black font-label-md hard-shadow-yellow press">送出報名</button>
+    </form>
+  </div>
+</div>
+
+<!-- Quiz Modal -->
+<div id="quiz-modal" class="modal-backdrop">
+  <div class="modal-card p-8">
+    <div class="flex justify-between items-start mb-6">
+      <h3 class="font-display text-2xl font-extrabold">30 秒職業 × AI 路徑測驗</h3>
+      <button data-modal-close class="w-10 h-10 border-2 border-ink-black flex items-center justify-center" aria-label="關閉"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <form data-fake-submit data-success="測驗完成！我們已把推薦的學習路徑寄到你的信箱。">
+      <div class="space-y-5">
+        <div><label class="font-label-md text-label-md block mb-2">1. 你的職業比較接近？</label>
+          <select class="field">
+            <option>行銷企劃 / 品牌 / 社群</option><option>業務 / 銷售</option><option>HR / 人資</option>
+            <option>老師 / 講師 / 教學</option><option>設計 / 創意接案</option><option>想自己創業</option>
+          </select></div>
+        <div><label class="font-label-md text-label-md block mb-2">2. 你最大的痛點？</label>
+          <select class="field"><option>產出量太大、時間不夠</option><option>重複性工作太多</option><option>想提升產能與收入</option><option>想從 0 開始做自己的事</option></select></div>
+        <div><label class="font-label-md text-label-md block mb-1">3. 留下 Email，拿你的專屬路徑</label><input required type="email" class="field" placeholder="you@email.com"/></div>
+      </div>
+      <button type="submit" class="w-full mt-7 bg-ink-black text-paper-cream py-4 border-2 border-ink-black font-label-md hard-shadow-yellow press">看我的學習路徑</button>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-forest-deep text-paper-cream pt-16 pb-8 border-t-4 border-marker-yellow">
+  <div class="max-w-7xl mx-auto px-container-padding grid md:grid-cols-12 gap-12">
+    <div class="md:col-span-4">
+      <img src="assets/brand/logo-white.png" alt="404TABLE" class="h-10 w-auto mb-5"/>
+      <p class="text-paper-cream/70 max-w-xs mb-4">AI 教育 × 共創空間 × 創業加速。在這裡，讓學習、空間與創業發光連結。</p>
+      <p class="font-label-sm text-label-sm text-paper-cream/60">台北市信義區基隆路一段 404 號 4 樓<br/>service@404table.com｜02-2345-6789</p>
+    </div>
+    <div class="md:col-span-2"><h5 class="font-label-md text-label-md text-marker-yellow mb-4">學習</h5><ul class="space-y-3 font-label-sm text-label-sm"><li><a href="courses.html" class="text-paper-cream/75 hover:text-rebel-orange">學程總覽</a></li><li><a href="founders.html" class="text-paper-cream/75 hover:text-rebel-orange">404 Founders</a></li><li><a href="events.html" class="text-paper-cream/75 hover:text-rebel-orange">活動消息</a></li></ul></div>
+    <div class="md:col-span-2"><h5 class="font-label-md text-label-md text-marker-yellow mb-4">關於</h5><ul class="space-y-3 font-label-sm text-label-sm"><li><a href="space.html" class="text-paper-cream/75 hover:text-rebel-orange">實體空間</a></li><li><a href="about.html" class="text-paper-cream/75 hover:text-rebel-orange">關於我們</a></li><li><a href="about.html#contact" class="text-paper-cream/75 hover:text-rebel-orange">聯絡 / 企業包班</a></li></ul></div>
+    <div class="md:col-span-4"><h5 class="font-label-md text-label-md text-marker-yellow mb-4">訂閱電子報</h5>
+      <form data-fake-submit data-success="訂閱成功！第一封信很快會到你的信箱。" class="flex">
+        <input type="email" required placeholder="your@email.com" class="flex-grow bg-paper-cream text-ink-black border-2 border-paper-cream px-4 py-2 focus:outline-none font-label-md text-label-md"/>
+        <button class="bg-marker-yellow text-ink-black px-5 font-label-md border-2 border-paper-cream border-l-0">GO</button>
+      </form>
+      <p class="font-label-sm text-label-sm text-paper-cream/55 mt-4">每週一篇 AI 工作流 essay，不寄垃圾信。</p>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-container-padding mt-14 pt-6 border-t border-paper-cream/15 flex flex-col md:flex-row justify-between gap-3 font-label-sm text-label-sm text-paper-cream/50">
+    <span>© 2026 404TABLE｜肆方創育股份有限公司</span>
+    <span class="flex gap-6"><a href="#" class="hover:text-rebel-orange">隱私權政策</a><a href="#" class="hover:text-rebel-orange">服務條款</a><a href="#" class="hover:text-rebel-orange">退費政策</a></span>
+  </div>
+</footer>
+</body>
+</html>

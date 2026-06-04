@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>404TABLE｜AI 時代，還能被找到的人</title>
+<meta name="description" content="404TABLE 結合 6 堂職業 × AI 應用課程、404 Founders 創業孵化器與實體共創基地，陪你從學習到落地，把想法變成真正發生的事。"/>
+<link rel="icon" href="assets/brand/logo-black.png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/tw-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="js/site.js" defer></script>
+</head>
+<body class="paper-grid bg-paper-cream text-ink-black font-body-md selection:bg-marker-yellow selection:text-ink-black overflow-x-hidden">
+<div id="scroll-progress"></div>
+
+<!-- ===== Header ===== -->
+<header class="sticky top-0 z-50 bg-paper-cream/95 backdrop-blur border-b-2 border-ink-black shadow-[4px_4px_0px_0px_rgba(11,51,43,1)]">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-container-padding h-20">
+    <a href="index.html" class="flex items-center gap-3 shrink-0">
+      <img src="assets/brand/logo-black.png" alt="404TABLE" class="h-9 w-auto"/>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 font-label-md text-label-md">
+      <a href="courses.html" class="hover:text-rebel-orange transition-colors">學程</a>
+      <a href="founders.html" class="hover:text-rebel-orange transition-colors">創業孵化</a>
+      <a href="space.html" class="hover:text-rebel-orange transition-colors">空間</a>
+      <a href="events.html" class="hover:text-rebel-orange transition-colors">活動</a>
+      <a href="about.html" class="hover:text-rebel-orange transition-colors">關於</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="courses.html" class="hidden sm:inline-flex items-center bg-forest-deep text-paper-cream px-5 py-2.5 border-2 border-ink-black font-label-md text-label-md hard-shadow-yellow press">立即報名</a>
+      <button id="menu-open" class="md:hidden w-11 h-11 border-2 border-ink-black flex items-center justify-center" aria-label="選單">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Mobile Drawer ===== -->
+<div id="mobile-drawer" class="closed fixed inset-0 z-[60] bg-forest-deep text-paper-cream md:hidden flex flex-col p-8">
+  <div class="flex justify-between items-center mb-12">
+    <img src="assets/brand/logo-white.png" alt="404TABLE" class="h-9 w-auto"/>
+    <button id="menu-close" class="w-11 h-11 border-2 border-paper-cream flex items-center justify-center" aria-label="關閉">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-7 font-display text-4xl font-extrabold">
+    <a href="courses.html">學程</a>
+    <a href="founders.html">創業孵化</a>
+    <a href="space.html">空間</a>
+    <a href="events.html">活動</a>
+    <a href="about.html">關於</a>
+  </nav>
+  <a href="courses.html" class="mt-auto bg-marker-yellow text-ink-black text-center px-6 py-4 border-2 border-paper-cream font-label-md">立即報名 2026 Q3 學程</a>
+</div>
+
+<main>
+<!-- ===== Hero ===== -->
+<section class="relative overflow-hidden bg-forest-deep text-paper-cream border-b-4 border-ink-black">
+  <img src="assets/space/space-main.jpg" alt="404TABLE 共創基地主空間" class="absolute inset-0 w-full h-full object-cover opacity-25 grayscale"/>
+  <div class="absolute inset-0 bg-gradient-to-r from-forest-deep via-forest-deep/85 to-transparent"></div>
+  <div class="relative max-w-7xl mx-auto px-container-padding py-24 lg:py-32 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="space-y-8">
+      <span class="inline-flex items-center gap-2 bg-marker-yellow text-ink-black px-4 py-1.5 border-2 border-ink-black font-label-md text-label-md -rotate-2">
+        <span class="material-symbols-outlined text-base">bolt</span> AI-NATIVE 教育 × 創業基地
+      </span>
+      <h1 class="font-display text-5xl md:text-7xl font-extrabold leading-[1.05]">
+        我們在訓練<br/>
+        AI 時代<span class="text-marker-yellow">，</span><br/>
+        還能<span class="rebel-underline text-marker-yellow">被找到</span>的人。
+      </h1>
+      <p class="font-body-lg text-body-lg max-w-md text-paper-cream/85">
+        404TABLE 結合 6 堂職業 × AI 應用課程、404 Founders 創業孵化器與實體共創基地，
+        陪你從學習到落地，把想法變成真正發生的事。
+      </p>
+      <div class="flex flex-wrap gap-4 pt-2">
+        <a href="courses.html" class="bg-marker-yellow text-ink-black px-8 py-4 border-2 border-ink-black font-label-md hard-shadow press">立即報名 2026 Q3 學程</a>
+        <a href="#thesis" class="border-2 border-paper-cream text-paper-cream px-8 py-4 font-label-md hover:bg-paper-cream hover:text-ink-black transition-all">我們相信什麼 →</a>
+      </div>
+    </div>
+    <!-- 拼貼視覺 -->
+    <div class="hidden lg:block relative h-[520px]">
+      <div class="absolute top-0 right-4 w-64 h-80 border-2 border-ink-black bg-paper-cream rotate-6 z-30 hard-shadow overflow-hidden">
+        <img src="assets/space/space-main-2.jpg" alt="主空間側拍" class="w-full h-full object-cover"/>
+      </div>
+      <div class="absolute bottom-6 left-0 w-72 h-44 bg-marker-yellow border-2 border-ink-black -rotate-6 z-20 flex flex-col justify-center p-6">
+        <p class="font-display text-ink-black text-3xl font-extrabold leading-none">職業 × AI</p>
+        <p class="font-label-md text-ink-black/80 mt-2 text-label-md">不教工具，教你的職業被 AI 重新顯示</p>
+      </div>
+      <div class="absolute top-24 left-6 w-72 h-[300px] border-2 border-ink-black bg-white -rotate-3 z-10 hard-shadow-yellow overflow-hidden">
+        <img src="assets/space/space-lounge.jpg" alt="交誼桌" class="w-full h-full object-cover"/>
+      </div>
+      <div class="absolute -top-6 left-1/2 w-32 h-32 border-4 border-dashed border-tech-cyan rounded-full animate-spin-slow opacity-60 z-40"></div>
+    </div>
+  </div>
+  <!-- Metric strip -->
+  <div class="relative border-t-2 border-ink-black bg-ink-black">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-x divide-paper-cream/15">
+      <div class="px-container-padding py-6">
+        <div class="font-display text-4xl font-extrabold text-marker-yellow">6</div>
+        <div class="font-label-md text-label-md text-paper-cream/70 mt-1">堂職業 AI 課程已上線</div>
+      </div>
+      <div class="px-container-padding py-6">
+        <div class="font-display text-4xl font-extrabold text-marker-yellow">10+</div>
+        <div class="font-label-md text-label-md text-paper-cream/70 mt-1">位業師，皆現役職人</div>
+      </div>
+      <div class="px-container-padding py-6">
+        <div class="font-display text-4xl font-extrabold text-marker-yellow">35</div>
+        <div class="font-label-md text-label-md text-paper-cream/70 mt-1">家合作企業已對接</div>
+      </div>
+      <div class="px-container-padding py-6">
+        <div class="font-display text-4xl font-extrabold text-marker-yellow">Q3</div>
+        <div class="font-label-md text-label-md text-paper-cream/70 mt-1">2026 首屆 Founders 開放申請</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 三大服務 ===== -->
+<section class="py-section-margin py-24 max-w-7xl mx-auto px-container-padding">
+  <div class="mb-14 reveal">
+    <span class="font-label-md text-label-md text-rebel-orange">WHAT WE DO</span>
+    <h2 class="font-display text-headline-lg md:text-display-lg font-extrabold text-forest-deep mt-2">我們把學習、空間與創業，放在同一張桌上</h2>
+    <div class="h-2 w-32 bg-rebel-orange mt-4"></div>
+  </div>
+  <div class="grid md:grid-cols-3 gap-8">
+    <!-- 1 -->
+    <a href="courses.html" class="reveal group bg-white border-2 border-ink-black p-8 hard-shadow hover:-translate-y-2 transition-transform relative block">
+      <span class="absolute -top-4 -right-4 bg-ink-black text-paper-cream px-3 py-1 font-label-md rotate-6">01</span>
+      <span class="material-symbols-outlined text-forest-deep text-5xl mb-6">school</span>
+      <h3 class="font-headline-md text-headline-md mb-3">教育學程</h3>
+      <p class="text-on-surface-variant mb-6">6 堂「職業 × AI 應用」課程，從行銷、業務、HR 到設計、教學與一人公司，把產能直接拉高 3 倍。</p>
+      <span class="font-label-md text-label-md text-rebel-orange font-bold inline-flex items-center">看完整學程 <span class="material-symbols-outlined ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
+    </a>
+    <!-- 2 -->
+    <a href="founders.html" class="reveal group bg-marker-yellow border-2 border-ink-black p-8 hard-shadow -rotate-1 hover:rotate-0 transition-transform relative block z-10">
+      <span class="absolute -top-4 -right-4 bg-ink-black text-paper-cream px-3 py-1 font-label-md rotate-6">02</span>
+      <span class="material-symbols-outlined text-forest-deep text-5xl mb-6">rocket_launch</span>
+      <h3 class="font-headline-md text-headline-md mb-3">創業孵化</h3>
+      <p class="text-ink-black/80 mb-6">404 Founders Cohort，3 個月共學週期，從點子驗證到第一筆收入，業師陪跑、不收股權。</p>
+      <span class="font-label-md text-label-md text-forest-deep font-bold inline-flex items-center">了解 Founders <span class="material-symbols-outlined ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
+    </a>
+    <!-- 3 -->
+    <a href="space.html" class="reveal group bg-forest-deep text-paper-cream border-2 border-ink-black p-8 hard-shadow rotate-1 hover:rotate-0 transition-transform relative block">
+      <span class="absolute -top-4 -right-4 bg-rebel-orange text-ink-black px-3 py-1 font-label-md rotate-6">03</span>
+      <span class="material-symbols-outlined text-marker-yellow text-5xl mb-6">meeting_room</span>
+      <h3 class="font-headline-md text-headline-md mb-3">實體基地</h3>
+      <p class="text-paper-cream/80 mb-6">明亮有質感的共創空間：主教室、會議室、訪談室、交誼桌與茶水間，駐點、開會、辦活動一次滿足。</p>
+      <span class="font-label-md text-label-md text-marker-yellow font-bold inline-flex items-center">預約參觀 <span class="material-symbols-outlined ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== Thesis ===== -->
+<section id="thesis" class="py-24 bg-ink-black text-paper-cream border-y-4 border-ink-black doodle-bg">
+  <div class="max-w-7xl mx-auto px-container-padding">
+    <div class="mb-16 reveal">
+      <span class="font-label-md text-label-md text-marker-yellow">OUR THESIS</span>
+      <h2 class="font-display text-headline-lg md:text-display-lg font-extrabold mt-2">我們不一樣的地方，不是「為什麼選我們」，是我們相信什麼</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="reveal">
+        <div class="font-display text-6xl font-extrabold text-rebel-orange/60 mb-4">01</div>
+        <h3 class="font-headline-md text-headline-md mb-3">AI 不會取代你的職業，會重新定義它</h3>
+        <p class="text-paper-cream/70">會被淘汰的不是某個職業，是「還用舊方法做事」的人。我們訓練你成為被 AI 放大、而不是被取代的那一個。</p>
+      </div>
+      <div class="reveal">
+        <div class="font-display text-6xl font-extrabold text-marker-yellow/60 mb-4">02</div>
+        <h3 class="font-headline-md text-headline-md mb-3">學 AI 工具沒用，學「職業 × AI」才有用</h3>
+        <p class="text-paper-cream/70">市面上教你怎麼下 prompt，我們教你的職業如何用 AI 重新跑一遍工作流，每堂課都長出可帶走的個人作品集。</p>
+      </div>
+      <div class="reveal">
+        <div class="font-display text-6xl font-extrabold text-tech-cyan/60 mb-4">03</div>
+        <h3 class="font-headline-md text-headline-md mb-3">教育與創業要綁在一起</h3>
+        <p class="text-paper-cream/70">學完不是回家，而是接進孵化器、進駐空間、加入社群。學習是入口，落地才是終點。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6 堂學程 ===== -->
+<section class="py-24 max-w-7xl mx-auto px-container-padding">
+  <div class="flex flex-wrap justify-between items-end mb-12 gap-4 reveal">
+    <div>
+      <span class="font-label-md text-label-md text-rebel-orange">COURSES · 職業 × AI 應用</span>
+      <h2 class="font-display text-headline-lg md:text-display-lg font-extrabold text-forest-deep mt-2">6 堂課，重新定義你的職業產能</h2>
+    </div>
+    <a href="courses.html" class="font-label-md text-label-md border-2 border-ink-black px-5 py-3 hover:bg-marker-yellow transition-colors">看完整學程 →</a>
+  </div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- 卡 1 -->
+    <a href="courses.html#c-mkt" class="reveal course-card bg-white border-2 border-ink-black p-6 block">
+      <div class="flex justify-between items-start mb-4">
+        <span class="bg-marker-yellow border border-ink-black px-2 py-1 font-label-sm text-label-sm uppercase">行銷企劃</span>
+        <span class="material-symbols-outlined text-forest-deep text-3xl">campaign</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md mb-2 leading-tight">AI 接住你的 KPI</h3>
+      <p class="text-on-surface-variant mb-6 text-sm">從接到 brief 到 campaign 上線，從 5 天壓到 1 天。</p>
+      <div class="flex justify-between items-center border-t border-ink-black/10 pt-4 font-label-sm text-label-sm">
+        <span>8 週 · 24 小時</span><span class="text-rebel-orange font-bold">早鳥 NT$15,800</span>
+      </div>
+    </a>
+    <!-- 卡 2 -->
+    <a href="courses.html#c-sales" class="reveal course-card bg-white border-2 border-ink-black p-6 block">
+      <div class="flex justify-between items-start mb-4">
+        <span class="bg-marker-yellow border border-ink-black px-2 py-1 font-label-sm text-label-sm uppercase">業務銷售</span>
+        <span class="material-symbols-outlined text-forest-deep text-3xl">handshake</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md mb-2 leading-tight">AI 幫你接單，你負責成交</h3>
+      <p class="text-on-surface-variant mb-6 text-sm">把每天 1 個有效客戶的產能變成 3 個。</p>
+      <div class="flex justify-between items-center border-t border-ink-black/10 pt-4 font-label-sm text-label-sm">
+        <span>6 週 · 18 小時</span><span class="text-rebel-orange font-bold">早鳥 NT$13,800</span>
+      </div>
+    </a>
+    <!-- 卡 3 -->
+    <a href="courses.html#c-hr" class="reveal course-card bg-white border-2 border-ink-black p-6 block">
+      <div class="flex justify-between items-start mb-4">
+        <span class="bg-marker-yellow border border-ink-black px-2 py-1 font-label-sm text-label-sm uppercase">HR 招募</span>
+        <span class="material-symbols-outlined text-forest-deep text-3xl">badge</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md mb-2 leading-tight">AI 一週做完你三週的 HR 工作</h3>
+      <p class="text-on-surface-variant mb-6 text-sm">把 HR 行政壓到 1/3，把時間還給人才策略。</p>
+      <div class="flex justify-between items-center border-t border-ink-black/10 pt-4 font-label-sm text-label-sm">
+        <span>6 週 · 18 小時</span><span class="text-rebel-orange font-bold">早鳥 NT$13,800</span>
+      </div>
+    </a>
+    <!-- 卡 4 -->
+    <a href="courses.html#c-edu" class="reveal course-card bg-white border-2 border-ink-black p-6 block">
+      <div class="flex justify-between items-start mb-4">
+        <span class="bg-marker-yellow border border-ink-black px-2 py-1 font-label-sm text-label-sm uppercase">教學設計</span>
+        <span class="material-symbols-outlined text-forest-deep text-3xl">menu_book</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md mb-2 leading-tight">AI 給你 24 小時不休息的教學助理</h3>
+      <p class="text-on-surface-variant mb-6 text-sm">從零生出 8 週課程的課綱、教材與考題。</p>
+      <div class="flex justify-between items-center border-t border-ink-black/10 pt-4 font-label-sm text-label-sm">
+        <span>8 週 · 24 小時</span><span class="text-rebel-orange font-bold">早鳥 NT$15,800</span>
+      </div>
+    </a>
+    <!-- 卡 5 -->
+    <a href="courses.html#c-design" class="reveal course-card bg-white border-2 border-ink-black p-6 block">
+      <div class="flex justify-between items-start mb-4">
+        <span class="bg-marker-yellow border border-ink-black px-2 py-1 font-label-sm text-label-sm uppercase">設計工作流</span>
+        <span class="material-symbols-outlined text-forest-deep text-3xl">brush</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md mb-2 leading-tight">AI 把你變成 3 倍速設計師</h3>
+      <p class="text-on-surface-variant mb-6 text-sm">一個人接案，做出一整間工作室的產能。</p>
+      <div class="flex justify-between items-center border-t border-ink-black/10 pt-4 font-label-sm text-label-sm">
+        <span>6 週 · 18 小時</span><span class="text-rebel-orange font-bold">早鳥 NT$16,800</span>
+      </div>
+    </a>
+    <!-- 卡 6 -->
+    <a href="courses.html#c-solo" class="reveal course-card bg-forest-deep text-paper-cream border-2 border-ink-black p-6 block">
+      <div class="flex justify-between items-start mb-4">
+        <span class="bg-rebel-orange text-ink-black border border-ink-black px-2 py-1 font-label-sm text-label-sm uppercase">一人公司</span>
+        <span class="material-symbols-outlined text-marker-yellow text-3xl">stylus_note</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md mb-2 leading-tight">不用團隊、不用創投，用 AI 開個自己的</h3>
+      <p class="text-paper-cream/75 mb-6 text-sm">從點子到第一筆收入的 90 天步驟拆解。</p>
+      <div class="flex justify-between items-center border-t border-paper-cream/20 pt-4 font-label-sm text-label-sm">
+        <span>10 週 · 30 小時</span><span class="text-marker-yellow font-bold">早鳥 NT$23,800</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ===== Founders 區 ===== -->
+<section class="py-24 bg-forest-deep text-paper-cream border-y-4 border-ink-black overflow-hidden">
+  <div class="max-w-7xl mx-auto px-container-padding grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal">
+      <span class="inline-block bg-marker-yellow text-ink-black px-4 py-1.5 border-2 border-ink-black font-label-md text-label-md -rotate-2 mb-6">404 FOUNDERS · 創業孵化器</span>
+      <h2 class="font-display text-headline-lg md:text-display-lg font-extrabold mb-6 leading-tight">從學員，到創辦人</h2>
+      <p class="font-body-lg text-body-lg text-paper-cream/80 mb-8 max-w-lg">
+        2026 Q4 首屆 Cohort 開放申請，限 12 席、3 個月共學週期。我們提供實體基地、業師陪跑、社群與 Demo Day——不收股權、不逼你 pitch 創投。
+      </p>
+      <ul class="space-y-4 mb-10">
+        <li class="flex gap-4"><span class="font-display text-3xl text-rebel-orange/70 font-extrabold shrink-0">M1</span><div><h4 class="font-headline-md text-headline-md">點子驗證 + MVP</h4><p class="text-paper-cream/70 text-sm">用 AI 驗證需求、做出第一版能跑的產品。</p></div></li>
+        <li class="flex gap-4"><span class="font-display text-3xl text-rebel-orange/70 font-extrabold shrink-0">M2</span><div><h4 class="font-headline-md text-headline-md">前 10 個付費客戶</h4><p class="text-paper-cream/70 text-sm">不靠廣告，拿下第一筆真實收入。</p></div></li>
+        <li class="flex gap-4"><span class="font-display text-3xl text-rebel-orange/70 font-extrabold shrink-0">M3</span><div><h4 class="font-headline-md text-headline-md">成長飛輪 + Demo Day</h4><p class="text-paper-cream/70 text-sm">建立留存機制，站上 Demo Day 舞台。</p></div></li>
+      </ul>
+      <a href="founders.html" class="inline-flex bg-marker-yellow text-ink-black px-8 py-4 border-2 border-ink-black font-label-md hard-shadow press">立即申請 Founders →</a>
+    </div>
+    <div class="relative reveal">
+      <div class="border-4 border-paper-cream p-2 hard-shadow-yellow rotate-2">
+        <img src="assets/space/space-meeting.jpg" alt="404 Founders 共學空間" class="w-full grayscale"/>
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-rebel-orange text-ink-black px-6 py-3 font-display text-2xl font-extrabold border-2 border-ink-black">首屆 12 席</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 業師團隊 ===== -->
+<section class="py-24 max-w-7xl mx-auto px-container-padding">
+  <div class="flex flex-wrap justify-between items-end mb-12 gap-4 reveal">
+    <div>
+      <span class="font-label-md text-label-md text-rebel-orange">MENTORS</span>
+      <h2 class="font-display text-headline-lg md:text-display-lg font-extrabold text-forest-deep mt-2">他們不是學院派，是還在第一線做事的人</h2>
+    </div>
+    <a href="about.html#team" class="font-label-md text-label-md border-2 border-ink-black px-5 py-3 hover:bg-marker-yellow transition-colors">看完整業師團 →</a>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-card-gap">
+    <figure class="reveal group">
+      <div class="aspect-[4/5] border-2 border-ink-black overflow-hidden hard-shadow-sm">
+        <img src="assets/teachers/bogi.jpg" alt="Bogi" class="w-full h-full object-cover grayscale group-hover:grayscale-0 tilt-img group-hover:scale-105"/>
+      </div>
+      <figcaption class="mt-3"><div class="font-headline-md text-lg">Bogi</div><div class="font-label-sm text-label-sm text-rebel-orange">行銷企劃 主講師</div></figcaption>
+    </figure>
+    <figure class="reveal group">
+      <div class="aspect-[4/5] border-2 border-ink-black overflow-hidden hard-shadow-sm">
+        <img src="assets/teachers/wayne.jpg" alt="Wayne" class="w-full h-full object-cover grayscale group-hover:grayscale-0 tilt-img group-hover:scale-105"/>
+      </div>
+      <figcaption class="mt-3"><div class="font-headline-md text-lg">Wayne</div><div class="font-label-sm text-label-sm text-rebel-orange">業務銷售 主講師</div></figcaption>
+    </figure>
+    <figure class="reveal group">
+      <div class="aspect-[4/5] border-2 border-ink-black overflow-hidden hard-shadow-sm">
+        <img src="assets/teachers/wendy.jpg" alt="Wendy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 tilt-img group-hover:scale-105"/>
+      </div>
+      <figcaption class="mt-3"><div class="font-headline-md text-lg">Wendy</div><div class="font-label-sm text-label-sm text-rebel-orange">HR 招募 主講師</div></figcaption>
+    </figure>
+    <figure class="reveal group">
+      <div class="aspect-[4/5] border-2 border-ink-black overflow-hidden hard-shadow-sm">
+        <img src="assets/teachers/kevin.jpg" alt="凱文" class="w-full h-full object-cover grayscale group-hover:grayscale-0 tilt-img group-hover:scale-105"/>
+      </div>
+      <figcaption class="mt-3"><div class="font-headline-md text-lg">凱文</div><div class="font-label-sm text-label-sm text-rebel-orange">教學設計 主講師</div></figcaption>
+    </figure>
+    <figure class="reveal group">
+      <div class="aspect-[4/5] border-2 border-ink-black overflow-hidden hard-shadow-sm">
+        <img src="assets/teachers/lily.jpg" alt="莉莉" class="w-full h-full object-cover grayscale group-hover:grayscale-0 tilt-img group-hover:scale-105"/>
+      </div>
+      <figcaption class="mt-3"><div class="font-headline-md text-lg">莉莉</div><div class="font-label-sm text-label-sm text-rebel-orange">設計工作流 主講師</div></figcaption>
+    </figure>
+    <figure class="reveal group">
+      <div class="aspect-[4/5] border-2 border-ink-black overflow-hidden hard-shadow-sm">
+        <img src="assets/teachers/ryan.jpg" alt="Ryan" class="w-full h-full object-cover grayscale group-hover:grayscale-0 tilt-img group-hover:scale-105"/>
+      </div>
+      <figcaption class="mt-3"><div class="font-headline-md text-lg">Ryan</div><div class="font-label-sm text-label-sm text-rebel-orange">一人公司 主講師</div></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 合作企業 ===== -->
+<section class="py-20 bg-surface-container-low border-y-2 border-ink-black">
+  <div class="max-w-7xl mx-auto px-container-padding">
+    <p class="text-center font-label-md text-label-md text-on-surface-variant mb-10 reveal">以下企業正在派員學習或洽談合作</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-px bg-ink-black border-2 border-ink-black reveal">
+      <!-- 佔位企業（黑白文字 logo wall） -->
+      <div class="bg-paper-cream h-24 flex items-center justify-center font-display text-xl font-extrabold text-forest-deep/70">NOVA</div>
+      <div class="bg-paper-cream h-24 flex items-center justify-center font-display text-xl font-extrabold text-forest-deep/70">疊石</div>
+      <div class="bg-paper-cream h-24 flex items-center justify-center font-display text-xl font-extrabold text-forest-deep/70">Loop AI</div>
+      <div class="bg-paper-cream h-24 flex items-center justify-center font-display text-xl font-extrabold text-forest-deep/70">畝心</div>
+      <div class="bg-paper-cream h-24 flex items-center justify-center font-display text-xl font-extrabold text-forest-deep/70">Verve</div>
+      <div class="bg-paper-cream h-24 flex items-center justify-center font-display text-xl font-extrabold text-forest-deep/70">島民工作室</div>
+    </div>
+    <p class="text-center mt-8 reveal"><a href="about.html#contact" class="font-label-md text-label-md text-rebel-orange font-bold hover:underline">企業包班諮詢 →</a></p>
+  </div>
+</section>
+
+<!-- ===== 二次 CTA ===== -->
+<section class="relative bg-marker-yellow py-24 border-b-4 border-ink-black overflow-hidden">
+  <div class="absolute inset-0 opacity-10 pointer-events-none">
+    <span class="material-symbols-outlined absolute top-8 left-8 text-[180px] -rotate-12">bolt</span>
+    <span class="material-symbols-outlined absolute bottom-4 right-8 text-[260px] rotate-12">star</span>
+  </div>
+  <div class="relative max-w-5xl mx-auto px-container-padding text-center">
+    <h2 class="font-display text-4xl md:text-6xl font-extrabold mb-6 leading-tight">2026 Q3 學程，<br class="md:hidden"/>開放報名中</h2>
+    <p class="font-body-lg text-body-lg mb-12 max-w-2xl mx-auto">不用先準備好，帶著你的職業與想解決的問題就好。</p>
+    <div class="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+      <a href="courses.html" class="bg-ink-black text-paper-cream px-6 py-5 border-2 border-ink-black font-label-md hard-shadow-sm press">報名學程</a>
+      <a href="founders.html" class="bg-forest-deep text-paper-cream px-6 py-5 border-2 border-ink-black font-label-md hard-shadow-sm press">申請 Founders</a>
+      <a href="space.html" class="bg-paper-cream text-ink-black px-6 py-5 border-2 border-ink-black font-label-md hard-shadow-sm press">預約空間</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="bg-forest-deep text-paper-cream pt-16 pb-8 border-t-4 border-marker-yellow">
+  <div class="max-w-7xl mx-auto px-container-padding grid md:grid-cols-12 gap-12">
+    <div class="md:col-span-4">
+      <img src="assets/brand/logo-white.png" alt="404TABLE" class="h-10 w-auto mb-5"/>
+      <p class="text-paper-cream/70 max-w-xs mb-4">AI 教育 × 共創空間 × 創業加速。在這裡，讓學習、空間與創業發光連結。</p>
+      <p class="font-label-sm text-label-sm text-paper-cream/60">台北市信義區基隆路一段 404 號 4 樓<br/>service@404table.com｜02-2345-6789</p>
+    </div>
+    <div class="md:col-span-2">
+      <h5 class="font-label-md text-label-md text-marker-yellow mb-4">學習</h5>
+      <ul class="space-y-3 font-label-sm text-label-sm">
+        <li><a href="courses.html" class="text-paper-cream/75 hover:text-rebel-orange">學程總覽</a></li>
+        <li><a href="founders.html" class="text-paper-cream/75 hover:text-rebel-orange">404 Founders</a></li>
+        <li><a href="events.html" class="text-paper-cream/75 hover:text-rebel-orange">活動消息</a></li>
+      </ul>
+    </div>
+    <div class="md:col-span-2">
+      <h5 class="font-label-md text-label-md text-marker-yellow mb-4">關於</h5>
+      <ul class="space-y-3 font-label-sm text-label-sm">
+        <li><a href="space.html" class="text-paper-cream/75 hover:text-rebel-orange">實體空間</a></li>
+        <li><a href="about.html" class="text-paper-cream/75 hover:text-rebel-orange">關於我們</a></li>
+        <li><a href="about.html#contact" class="text-paper-cream/75 hover:text-rebel-orange">聯絡 / 企業包班</a></li>
+      </ul>
+    </div>
+    <div class="md:col-span-4">
+      <h5 class="font-label-md text-label-md text-marker-yellow mb-4">訂閱電子報</h5>
+      <form data-fake-submit data-success="訂閱成功！第一封信很快會到你的信箱。" class="flex">
+        <input type="email" required placeholder="your@email.com" class="flex-grow bg-paper-cream text-ink-black border-2 border-paper-cream px-4 py-2 focus:outline-none font-label-md text-label-md"/>
+        <button class="bg-marker-yellow text-ink-black px-5 font-label-md border-2 border-paper-cream border-l-0">GO</button>
+      </form>
+      <p class="font-label-sm text-label-sm text-paper-cream/55 mt-4">每週一篇 AI 工作流 essay，不寄垃圾信。</p>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-container-padding mt-14 pt-6 border-t border-paper-cream/15 flex flex-col md:flex-row justify-between gap-3 font-label-sm text-label-sm text-paper-cream/50">
+    <span>© 2026 404TABLE｜肆方創育股份有限公司</span>
+    <span class="flex gap-6"><a href="#" class="hover:text-rebel-orange">隱私權政策</a><a href="#" class="hover:text-rebel-orange">服務條款</a><a href="#" class="hover:text-rebel-orange">退費政策</a></span>
+  </div>
+</footer>
+</body>
+</html>
