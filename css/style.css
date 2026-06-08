@@ -165,3 +165,29 @@ body > * { position: relative; z-index: 1; }
 }
 .field:focus { outline: none; border-color: var(--rebel-orange); }
 select.field { padding-left: 0; }
+
+/* =========================================================
+   RWD — 行動裝置（觸控）友善閱讀與互動
+   ========================================================= */
+@media (hover: none) {
+  /* 觸控裝置沒有 hover：原本「灰階→滑過上色」的圖會永遠卡在灰階，
+     直接顯示彩色，手機看圖才正常 */
+  .grayscale { filter: none !important; }
+
+  /* 卡片原本靠 hover 浮起，觸控改用點擊（:active）給明確回饋 */
+  .course-card:active { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 0 #FF6B4A; }
+
+  /* 觸控時也讓圖片容器的「滑過放大」改為點擊微放大，避免完全沒回饋 */
+  .group:active .tilt-img { transform: scale(1.04); }
+}
+
+/* 手機直書避免標點懸掛在行首造成閱讀停頓 */
+@media (max-width: 480px) {
+  h1, h2 { line-break: strict; }
+}
+
+/* 手機：收緊區塊上下留白，內容更集中、少一點空捲動（桌面維持原樣） */
+@media (max-width: 640px) {
+  .py-24 { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+  .py-28 { padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
+}
